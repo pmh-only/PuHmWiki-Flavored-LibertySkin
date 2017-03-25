@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liberty LLC","Kongjak","..."
+		]
+	},
+	"skinname-liberty": "Liberty",
+	"liberty-desc": "Default skin of Kongjak Wiki. Base on librewiki's Liberty skin",
+	"liberty.css": "/* CSS placed here will affect users of the Liberty skin */",
+	"liberty.js": "/* Any JavaScript here will be loaded for users using the Liberty skin */"
+}
