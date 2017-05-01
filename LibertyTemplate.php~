@@ -57,13 +57,13 @@ class LibertyTemplate extends BaseTemplate {
                     } ?>
                 </div>
                 <div style="position: fixed; bottom: 10px; right: 50px;">
-    						<a href="#top" class="well well-sm">
+    						<a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
 								<span class="fa-stack fa-lg">
   									<i class="fa-stack-2x" style="color:#00BCD4;"></i>
   									<i class="fa fa-chevron-up fa-stack-1x fa-inverse" style="color:#00BCD4;"></i></span></a>
   						</div>
   						<div style="position: fixed; bottom: 10px; right: 10px;">
-    						<a href="#footer" class="well well-sm">
+    						<a href="#footer" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
 								<span class="fa-stack fa-lg">
   									<i class="fa-stack-2x" style="color:#00BCD4;"></i>
   									<i class="fa fa-chevron-down fa-stack-1x fa-inverse" style="color:#00BCD4;"></i></span></a>
