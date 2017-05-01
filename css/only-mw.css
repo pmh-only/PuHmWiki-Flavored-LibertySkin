@@ -91,11 +91,9 @@
 }
 
 .Liberty .content-wrapper .liberty-content .liberty-content-main .catlinks {
-    border: 1px solid #e1e8ed;
     padding: 0.4rem;
     padding-left: 1rem;
-    box-shadow: 0.15rem 0.15rem 0 0 #cfdae2;
-    margin-bottom: 0.8rem;
+    #box-shadow: 0.15rem 0.15rem 0 0 #cfdae2;
     border-radius: 2px;
     display: inline-block;
     width: 100%;

@@ -49,12 +49,12 @@ class LibertyTemplate extends BaseTemplate {
                 <div class="liberty-content-main">
                     <?php if ( $title->getNamespace() != NS_SPECIAL && $action != "edit" && $action != "history") { ?>
                     <?php } ?>
-                    <?php if ( $this->data['catlinks'] ) {
-                        $this->html( 'catlinks' );
-                    } ?>
 					<article>
                     <?php $this->html( 'bodycontent' ) ?>
 					</article>
+					      <?php if ( $this->data['catlinks'] ) {
+                        $this->html( 'catlinks' );
+                    } ?>
                 </div>
                 <div style="position: fixed; bottom: 10px; right: 10px;">
     					<a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
