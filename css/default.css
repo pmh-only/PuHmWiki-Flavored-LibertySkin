@@ -451,7 +451,7 @@ del, s, strike {
 }
 
 .Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer .label:hover {
-    background-color: #2979f0;
+    background-color: #4DD0E1;
     transition: 0.3s;
 }
     /* 오른쪽 메뉴 수정 End */
@@ -541,7 +541,7 @@ del, s, strike {
 /* 컨텐츠 하단 수정 */
 .Liberty .content-wrapper .liberty-footer {
     border: 1px solid #e1e8ed;
-    border-radius: 0 0 0.35rem 0.35rem;
+    border-radius: 0 0 2px 2px;
     background-color: #f5f8fa;
     padding: 1rem;
     clear: both;
