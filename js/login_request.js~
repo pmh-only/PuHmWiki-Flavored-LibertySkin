@@ -1,6 +1,6 @@
 function LoginManage(lasturl) {
     try {
-        var url = '/w/' + lasturl;
+        var url = '/' + lasturl;
         $.ajax({
             url: mw.util.wikiScript('api'),
             type: 'post',
