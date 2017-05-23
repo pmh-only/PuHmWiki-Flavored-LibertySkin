@@ -333,6 +333,26 @@ del, s, strike {
 }
 /* 네비 수정 End */
 
+.go-to-top{
+	position: fixed;
+	bottom: 10px; 
+	right: 50px;
+}
+
+.go-to-bottom{
+	position: fixed; 
+	bottom: 10px; 
+	right: 10px;
+}
+
+.go-to-top i{
+	color: #00BCD4;
+}
+
+.go-to-bottom i{
+	color: #00BCD4;
+}
+
 /* 오른쪽 메뉴 수정 */
 .Liberty .content-wrapper .liberty-sidebar {
     float: right;

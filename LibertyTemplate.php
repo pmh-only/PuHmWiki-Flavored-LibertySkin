@@ -56,18 +56,14 @@ class LibertyTemplate extends BaseTemplate {
                         $this->html( 'catlinks' );
                     } ?>
                 </div>
-                <div style="position: fixed; bottom: 10px; right: 50px;">
-    						<a href="#top" class="well well-sm">
+    						<a href="#" class="go-to-top">
 								<span class="fa-stack fa-lg">
-  									<i class="fa-stack-2x" style="color:#00BCD4;"></i>
-  									<i class="fa fa-chevron-up fa-stack-1x fa-inverse" style="color:#00BCD4;"></i></span></a>
-  						</div>
-  						<div style="position: fixed; bottom: 10px; right: 10px;">
-    						<a href="#footer" class="well well-sm">
+  									<i class="fa-stack-2x"></i>
+  									<i class="fa fa-chevron-up fa-stack-1x fa-inverse"></i></span></a>
+    						<a href="#" class="go-to-bottom">
 								<span class="fa-stack fa-lg">
-  									<i class="fa-stack-2x" style="color:#00BCD4;"></i>
-  									<i class="fa fa-chevron-down fa-stack-1x fa-inverse" style="color:#00BCD4;"></i></span></a>
-  						</div>
+  									<i class="fa-stack-2x"></i>
+  									<i class="fa fa-chevron-down fa-stack-1x fa-inverse"></i></span></a>
 				<footer id="footer">
                 <div class="liberty-footer">
                     <?php $this->footer(); ?>
@@ -84,7 +80,6 @@ class LibertyTemplate extends BaseTemplate {
 
   				ga('create', 'UA-93971368-1', 'auto');
   				ga('send', 'pageview');
-
 		  </script>
 		<?php $this->login_modal(); ?>
 		<?php

@@ -67,7 +67,8 @@
 				"js/live-recent.js",
 				"js/delay_scrolling.js",
 				"js/notice_view.js",
-				"js/layout.js"
+				"js/layout.js",
+				"js/go_to_top.js"
 			],
 			"position": "bottom"
 		}
