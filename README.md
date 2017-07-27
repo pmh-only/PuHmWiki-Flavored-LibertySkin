@@ -1,6 +1,6 @@
 리브레 위키의 리버티 스킨을 기반으로 수정한 스킨
 
-<https://kongjak.com> 에서 예시를 보세요.
+<https://wiki.kongjak.com> 에서 예시를 보세요.
 
 원본은 <https://gitlab.com/librewiki/Liberty-MW-Skin> 입니다.
 
