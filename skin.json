@@ -1,14 +1,14 @@
 {
-	"name": "리버티",
+	"name": "Liberty",
 	"author": [
-		"Liberty LLC", "공작", "..."
+		"Liberty LLC","이츠레아","well-made-plush","nessun","revi","zlzleking","katinor","nuxe"
 	],
-	"url": "https://github.com/kongwoojin/Kongjak_Liberty",
+	"url": "https://librewiki.net/wiki/Skin:Liberty",
 	"descriptionmsg": "liberty-desc",
 	"namemsg": "skinname-liberty",
 	"license-name": "GPL-3.0+",
 	"type": "skin",
-	"version": "1.1.9",
+	"version": "1.1.6-General",
 	"ValidSkinNames": {
 		"liberty": "Liberty"
 	},
@@ -64,11 +64,12 @@
 		"skins.liberty.layoutjs": {
 			"scripts": [
 				"js/login_request.js",
-				"js/live-recent.js",
+				"js/live_Recents.js",
+				"js/index_botton.js",
 				"js/delay_scrolling.js",
 				"js/notice_view.js",
-				"js/layout.js",
-				"js/go_to_top.js"
+				"js/sns_button.js",
+				"js/layout.js"
 			],
 			"position": "bottom"
 		}
