@@ -85,6 +85,9 @@ class LibertyTemplate extends BaseTemplate {
                     <li class="nav-item" style="align-content: right;">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '뭔가 업로드 하는거랑 관련된 특수문서 같은걸 불러올꺼 같습니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
             </li>
+                    <li class="nav-item" style="align-content: right;">
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '흠... 뭐가 맘에 안드나요? 그럼, 바꾸세요! [알+쉬+o]', 'accesskey' => 'o') ); ?>
+            </li>
                     <li class="nav-item" style="float: right;">
                         <?=Linker::linkKnown( SpecialPage::getTitleFor( 'logout', null ), '<span class="fa fa-sign-out-alt"></span>', array( 'class' => 'nav-link', 'title' => '장비를 정지합니다! [알+쉬+u]', 'accesskey' => 'u') ); ?>
                     </li>
