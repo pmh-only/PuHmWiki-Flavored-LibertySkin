@@ -3,7 +3,7 @@ a {
 }
 
 a.new {
-    color: #b73333;
+    color: #ff7d63;
 }
 
 a:hover, a:focus {
@@ -13,7 +13,7 @@ a:hover, a:focus {
 }
 
 a.new:hover, a.new:focus {
-    color: #7c2323;
+    color: #b73333;
     text-decoration: underline;
     transition: 0.3s;
 }
