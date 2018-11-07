@@ -78,7 +78,7 @@ class LibertyTemplate extends BaseTemplate {
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'SpecialPages', null ), '<span class="fa fa-star"></span>', array( 'class' => 'nav-link', 'title' => '뭔가 특별한거 같은 문서를 불러올꺼 같습니다. [알+쉬+s]', 'accesskey' => 's') ); ?>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://tes.dothome.co.kr/index.php/%ED%85%8C%EC%8A%A4%EC%9C%84%ED%82%A4:%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8_%EB%A1%9C%EA%B7%B8" title="테스위키의 소프트웨어적 업데이트를 모아보았습니다!"><i class="fab fa-angellist"></i></a>
+                <a class="nav-link" href="http://tes.dothome.co.kr/%ED%85%8C%EC%8A%A4%EC%9C%84%ED%82%A4:%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8_%EB%A1%9C%EA%B7%B8" title="테스위키의 소프트웨어적 업데이트를 모아보았습니다!"><i class="fab fa-angellist"></i></a>
             </li>
             <?php global $wgUser, $wgRequest;
             if ($wgUser->isLoggedIn()) { ?>
