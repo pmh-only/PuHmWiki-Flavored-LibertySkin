@@ -14,21 +14,14 @@ class SkinLiberty extends SkinTemplate {
 		$out->addMeta('apple-mobile-web-app-capable', 'Yes');
 		$out->addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
 		$out->addMeta('mobile-web-app-capable', 'Yes');
-
 		
-		
-        $out->addModuleScripts( array(
-            'skins.liberty.bootstrap'
-        ) );
-        $out->addModuleScripts( array(
-            'skins.liberty.layoutjs'
-        ) );
+        $out->addModules('skins.liberty.bootstrap');
+        $out->addModules('skins.liberty.layoutjs');
     }
 
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
- 	        $out->addHeadItem( 'font-awesome', '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">' );
-	        $out->addHeadItem( 'google-ads', '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' );
+ 	        $out->addHeadItem( 'font-awesome', '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">' );
 		$out->addModuleStyles( array(
 			'skins.liberty.styles'
 		) );

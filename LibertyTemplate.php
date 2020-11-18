@@ -8,7 +8,7 @@ class LibertyTemplate extends BaseTemplate {
 		$title = $this->getSkin()->getTitle();
 		$curid = $this->getSkin()->getTitle()->getArticleID();
 
-		wfSuppressWarnings();
+		Wikimedia\AtEase\AtEase::suppressWarnings();
 
 		$this->html( 'headelement' );
 		?>
@@ -52,7 +52,7 @@ class LibertyTemplate extends BaseTemplate {
 		echo Html::closeElement( 'body' );
 		echo Html::closeElement( 'html' );
 		echo "\n";
-		wfRestoreWarnings();
+		Wikimedia\AtEase\AtEase::restoreWarnings();
 	} // end of execute() method
 
 	/*************************************************************************************************/
@@ -63,38 +63,35 @@ class LibertyTemplate extends BaseTemplate {
         <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="fa fa-exchange-alt">', array( 'class' => 'nav-link', 'title' => '뭔가 바뀐거 같은 문서를 불러올꺼 같습니다. [알+쉬+h]', 'accesskey' => 'c') ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="fa fa-exchange-alt">', array( 'class' => 'nav-link', 'title' => '최근 변경된 문서 리스트를 불러옵니다. [알+쉬+h]', 'accesskey' => 'c') ); ?>
             </li>
             <li class="nav-item">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Randompage', null ), '<span class="fa fa-sync-alt fa-spin">', array( 'class' => 'nav-link', 'title' => '당신의 운을 시험해볼꺼 같습니다. [알+쉬+r]', 'accesskey' => 'r' ) ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Randompage', null ), '<span class="fa fa-sync-alt fa-spin">', array( 'class' => 'nav-link', 'title' => '무작위 문서를 불러옵니다. [알+쉬+r]', 'accesskey' => 'r' ) ); ?>
             </li>
             <li class="nav-item">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'LongPages', null ), '<span class="fa fa-sort-amount-up">', array( 'class' => 'nav-link', 'title' => '크고 아름다운 문서들을 불러올꺼 같습니다. [알+쉬+k]', 'accesskey' => 'k' ) ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'LongPages', null ), '<span class="fa fa-sort-amount-up">', array( 'class' => 'nav-link', 'title' => '위키 내에서 긴 문서별로 리스트를 불러옵니다. [알+쉬+k]', 'accesskey' => 'k' ) ); ?>
             </li>
             <li class="nav-item">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'ShortPages', null ), '<span class="fa fa-sort-amount-down">', array( 'class' => 'nav-link', 'title' => '작고 아름다운 문서들을 불러올꺼 같습니다. [알+쉬+m]', 'accesskey' => 'm' ) ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'ShortPages', null ), '<span class="fa fa-sort-amount-down">', array( 'class' => 'nav-link', 'title' => '위키 내에서 짧은 문서별로 리스트를 불러옵니다. [알+쉬+m]', 'accesskey' => 'm' ) ); ?>
             </li>
             <li class="nav-item">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'SpecialPages', null ), '<span class="fa fa-star"></span>', array( 'class' => 'nav-link', 'title' => '뭔가 특별한거 같은 문서를 불러올꺼 같습니다. [알+쉬+s]', 'accesskey' => 's') ); ?>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="http://tes.dothome.co.kr/%ED%85%8C%EC%8A%A4%EC%9C%84%ED%82%A4:%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8_%EB%A1%9C%EA%B7%B8" title="테스위키의 소프트웨어적 업데이트를 모아보았습니다!"><i class="fab fa-angellist"></i></a>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'SpecialPages', null ), '<span class="fa fa-star"></span>', array( 'class' => 'nav-link', 'title' => '위키 특별문서 리스트를 불러옵니다. [알+쉬+s]', 'accesskey' => 's') ); ?>
             </li>
             <?php global $wgUser, $wgRequest;
             if ($wgUser->isLoggedIn()) { ?>
                     <li class="nav-item" style="align-content: right;">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '뭔가 업로드 하는거랑 관련된 특수문서 같은걸 불러올꺼 같습니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '파일 업로드 특별문서를 불러옵니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
             </li>
                     <li class="nav-item" style="align-content: right;">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '흠... 뭐가 맘에 안드나요? 그럼, 바꾸세요! [알+쉬+o]', 'accesskey' => 'o') ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '유저 설정 특별문서를 불러옵니다. [알+쉬+o]', 'accesskey' => 'o') ); ?>
             </li>
                     <li class="nav-item" style="float: right;">
-                        <?=Linker::linkKnown( SpecialPage::getTitleFor( 'logout', null ), '<span class="fa fa-sign-out-alt"></span>', array( 'class' => 'nav-link', 'title' => '장비를 정지합니다! [알+쉬+u]', 'accesskey' => 'u') ); ?>
+                        <?=Linker::linkKnown( SpecialPage::getTitleFor( 'logout', null ), '<span class="fa fa-sign-out-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그아웃을 합니다. [알+쉬+u]', 'accesskey' => 'u') ); ?>
                     </li>
 
             <?php } else { ?>
             <li class="nav-item" style="float: right;">
-                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'login', null ), '<span class="fa fa-sign-in-alt"></span>', array( 'class' => 'nav-link', 'title' => '남조선들이 흔히 부르는 로그인이라는 기능인거 같습네다. [알+쉬+l]', 'accesskey' => 'l') ); ?>
+                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'login', null ), '<span class="fa fa-sign-in-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그인을 합니다. [알+쉬+l]', 'accesskey' => 'l') ); ?>
             </li>
         <?php } ?>
 
@@ -140,18 +137,18 @@ class LibertyTemplate extends BaseTemplate {
                         $editaction = array( 'action' => 'edit' );
                     }
                     ?>
-                    <?=Linker::linkKnown( $title, '편집', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [alt+shift+e]', 'accesskey' => 'e' ), $editaction ); ?>
-                    <?=Linker::linkKnown( $title, '추가', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '새 문단을 추가합니다. [alt+shift+n]', 'accesskey' => 'n' ), array( 'action' => 'edit', 'section' => 'new' ) ); ?>
-                    <?=Linker::linkKnown( $title, '기록', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서의 편집 기록을 불러옵니다. [alt+shift+h]', 'accesskey' => 'h' ), array( 'action' => 'history' ) ); ?>
+                    <?=Linker::linkKnown( $title, '편집', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [알+쉬+e]', 'accesskey' => 'e' ), $editaction ); ?>
+                    <?=Linker::linkKnown( $title, '추가', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '새 문단을 추가합니다. [알+쉬+n]', 'accesskey' => 'n' ), array( 'action' => 'edit', 'section' => 'new' ) ); ?>
+                    <?=Linker::linkKnown( $title, '기록', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서의 편집 기록을 불러옵니다. [알+쉬+h]', 'accesskey' => 'h' ), array( 'action' => 'history' ) ); ?>
                     <?=Linker::linkKnown( SpecialPage::getTitleFor( 'WhatLinksHere', $title ), '역링크', array('class' => 'btn btn-secondary tools-btn')  ); ?>
-                    <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Movepage', $title ), '옮기기', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 옮깁니다. [alt+shift+b]', 'accesskey' => 'b' )); ?>
+                    <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Movepage', $title ), '옮기기', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 옮깁니다. [알+쉬+b]', 'accesskey' => 'b' )); ?>
                     <?php
                         if ( $title->quickUserCan( 'protect', $user ) ) { ?>
                             <?=Linker::linkKnown( $title, '/', array ('class' => 'btn btn-secondary tools-btn')); ?>
-                            <?=Linker::linkKnown( $title, '보호', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 보호합니다. [alt+shift+q]', 'accesskey' => 'q' ), array( 'action' => 'protect' ) ); ?>
+                            <?=Linker::linkKnown( $title, '보호', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 보호합니다. [알+쉬+q]', 'accesskey' => 'q' ), array( 'action' => 'protect' ) ); ?>
                         <?php } ?>
                         <?php if ( $title->quickUserCan( 'delete', $user ) ) { ?>
-                            <?=Linker::linkKnown( $title, '삭제', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 삭제합니다. [alt+shift+d]', 'accesskey' => 'd' ), array( 'action' => 'delete' ) ); ?>
+                            <?=Linker::linkKnown( $title, '삭제', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 삭제합니다. [알+쉬+d]', 'accesskey' => 'd' ), array( 'action' => 'delete' ) ); ?>
                         <?php }
                      ?>
                 </div>
