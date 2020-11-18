@@ -2,9 +2,9 @@
 
 2차 제작: https://github.com/kongwoojin/Liberty
 
-3차 제작: https://github.com/PMHStudio/TesWiki-Flavored-LibertySkin
+3차 제작: https://github.com/pmh-only/PuHmWiki-Flavored-LibertySkin
 
 ----------------------------------------------------------------------
 
-[테스위키 공식 위키](http://teswiki.co.nf)에서 적용된 스킨을 확인하실 수 있습니다
+[프흠위키](http://wiki.pmh.codes)에서 적용된 스킨을 확인하실 수 있습니다
 
