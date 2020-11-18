@@ -1,9 +1,9 @@
 a {
-    color: #ff7d63;
+    color: #EC6E61;
 }
 
 a.new {
-    color: #ff7d63;
+    color: #EC6E61;
 }
 
 a:hover, a:focus {
@@ -19,21 +19,21 @@ a.new:hover, a.new:focus {
 }
 
 a.external {
-    color: #ff7d63;
+    color: #EC6E61;
 }
 
 a.external:hover, a.external:focus {
-    color: #36C74D;
+    color: #55BD86;
     text-decoration: underline;
     transition: 0.3s;
 }
 
 .plainlinks a.external {
-    color: #ff7d63;
+    color: #EC6E61;
 }
 
 .plainlinks a.external:hover, .plainlinks a.external:focus {
-    color: #36C74D;
+    color: #55BD86;
     text-decoration: underline;
     transition: 0.3s;
 }

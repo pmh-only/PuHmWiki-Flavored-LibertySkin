@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-/* 메인 색깔 #FFC836 */
+/* 메인 색깔 #2E7DBD */
 /* 테두리 색깔 #e1e8ed */
 
 /* 태그 수정 */
@@ -182,7 +182,7 @@ del, s, strike {
 
 /* 백그라운드 색 지정 */
 .Liberty {
-    background-color: #FF7D63;
+    background-color: #F4F4F4;
 }
 /* 백그라운드 색 지정 End*/
 
@@ -196,7 +196,7 @@ del, s, strike {
 /* 네비 수정 */
 .Liberty .nav-wrapper {
     min-height: 2.8rem;
-    background-color: #FFC836;
+    background-color: #2E7DBD;
     z-index: 1001;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
@@ -273,7 +273,7 @@ del, s, strike {
 }
 
 .Liberty .nav-wrapper .navbar .form-inline .btn:hover, .Liberty .nav-wrapper .navbar .form-inline .btn:focus {
-    background-color: #FFC836;
+    background-color: #2E7DBD;
     border-color: #5997f3;
     color: #fff;
     outline: 0;
@@ -298,7 +298,7 @@ del, s, strike {
 
 /* 컨텐츠 수정 */
 .Liberty .content-wrapper {
-    margin-top: 3.33rem;
+    margin-top: 5px;
 }
 
 .Liberty .content-wrapper .liberty-content {
@@ -341,7 +341,7 @@ del, s, strike {
 .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:hover,
 .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:focus,
 .Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools .tools-btn:active {
-    background-color: #FFC836;
+    background-color: #2E7DBD;
     color: #fff;
     transition: 0.3s;
     outline: 0;
