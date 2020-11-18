@@ -47,3 +47,8 @@ a.external:hover, a.external:focus {
     background-color: #fff;
     border-color: #ccc;
 }
+
+.mw-editsection {
+    font-size: 12px;
+    margin-left: 10px;
+}
