@@ -37,3 +37,13 @@ a.external:hover, a.external:focus {
     text-decoration: underline;
     transition: 0.3s;
 }
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}

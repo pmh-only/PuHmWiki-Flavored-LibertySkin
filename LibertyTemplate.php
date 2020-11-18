@@ -60,8 +60,8 @@ class LibertyTemplate extends BaseTemplate {
     function nav_menu() {
     ?>
     <nav class="navbar navbar-dark">
-        <a class="navbar-brand" href="/"></a>
         <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="/"></a>
             <li class="nav-item">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="fa fa-exchange-alt">', array( 'class' => 'nav-link', 'title' => '최근 변경된 문서 리스트를 불러옵니다. [알+쉬+h]', 'accesskey' => 'c') ); ?>
             </li>
@@ -108,7 +108,7 @@ class LibertyTemplate extends BaseTemplate {
             <input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
             <div class="input-group">
                 <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
-                <span class="input-group-btn">
+                <span class="btn-group" role="group">
                     <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
                     <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
                 </span>
