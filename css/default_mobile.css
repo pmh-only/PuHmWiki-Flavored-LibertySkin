@@ -8,13 +8,20 @@
         padding: 0 0.5rem;
     }
 
+    .Liberty .nav-wrapper .navbar .form-inline {
+        float: left;
+        padding: 0;
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
+    }
+
     .Liberty .nav-wrapper .navbar .form-inline .input-group {
         display: table;
         width: 100%;
     }
 
     .Liberty .nav-wrapper .navbar .form-inline .input-group .form-control {
-        width: 100%;
+        /* width: 100%; */
     }
 
     .Liberty .nav-wrapper .navbar .form-inline .input-group .input-group-append {

@@ -59,7 +59,7 @@ class LibertyTemplate extends BaseTemplate {
 
     function nav_menu() {
     ?>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href="/"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -111,13 +111,9 @@ class LibertyTemplate extends BaseTemplate {
     ?>
         <form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="form-inline">
             <input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
-            <div class="input-group">
-                <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
-                <span class="input-group-append">
-                    <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
-                    <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
-                </span>
-            </div>
+            <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
+            <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
+            <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
         </form>
     <?php
 	}
