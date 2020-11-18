@@ -60,8 +60,11 @@ class LibertyTemplate extends BaseTemplate {
     function nav_menu() {
     ?>
     <nav class="navbar navbar-dark">
-        <ul class="nav navbar-nav">
-            <a class="navbar-brand" href="/"></a>
+        <a class="navbar-brand" href="/"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <li class="nav-item">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="fa fa-exchange-alt">', array( 'class' => 'nav-link', 'title' => '최근 변경된 문서 리스트를 불러옵니다. [알+쉬+h]', 'accesskey' => 'c') ); ?>
             </li>
@@ -79,10 +82,10 @@ class LibertyTemplate extends BaseTemplate {
             </li>
             <?php global $wgUser, $wgRequest;
             if ($wgUser->isLoggedIn()) { ?>
-                    <li class="nav-item" style="align-content: right;">
+                    <li class="nav-item">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '파일 업로드 특별문서를 불러옵니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
             </li>
-                    <li class="nav-item" style="align-content: right;">
+                    <li class="nav-item">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '유저 설정 특별문서를 불러옵니다. [알+쉬+o]', 'accesskey' => 'o') ); ?>
             </li>
                     <li class="nav-item" style="float: right;">
@@ -90,7 +93,7 @@ class LibertyTemplate extends BaseTemplate {
                     </li>
 
             <?php } else { ?>
-            <li class="nav-item" style="float: right;">
+            <li class="nav-item">
                 <?=Linker::linkKnown( SpecialPage::getTitleFor( 'login', null ), '<span class="fa fa-sign-in-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그인을 합니다. [알+쉬+l]', 'accesskey' => 'l') ); ?>
             </li>
         <?php } ?>
