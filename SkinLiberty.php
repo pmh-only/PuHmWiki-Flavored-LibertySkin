@@ -8,12 +8,13 @@ class SkinLiberty extends SkinTemplate {
     public function initPage( OutputPage $out ) {
         parent::initPage( $out );
         $out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1' );
-        $out->addMeta( 'keywords', 'wiki,' . $this->getSkin()->getTitle() );
+				$out->addMeta( 'keywords', 'wiki,' . $this->getSkin()->getTitle() );
+				$out->addMeta( 'og:title', $this->getSkin()->getTitle() . ' - 프흠위키' );
+				$out->addMeta( 'theme-color', '#2E7DBD' );
 		
-		/* IOS 기기 및 모바일 크롬에서의 웹앱 옵션 켜기 및 상단바 투명화 */
-		$out->addMeta('apple-mobile-web-app-capable', 'Yes');
-		$out->addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
-		$out->addMeta('mobile-web-app-capable', 'Yes');
+				$out->addMeta('apple-mobile-web-app-capable', 'Yes');
+				$out->addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
+				$out->addMeta('mobile-web-app-capable', 'Yes');
 		
         $out->addModules('skins.liberty.bootstrap');
         $out->addModules('skins.liberty.layoutjs');
