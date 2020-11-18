@@ -108,7 +108,7 @@ class LibertyTemplate extends BaseTemplate {
             <input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
             <div class="input-group">
                 <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
-                <span class="btn-group" role="group">
+                <span class="input-group-append">
                     <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
                     <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
                 </span>
