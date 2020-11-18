@@ -220,7 +220,6 @@ del, s, strike {
 }
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fa {
-    margin-right: 0.5rem;
     font-size: 1rem;
 }
 
@@ -595,7 +594,7 @@ del, s, strike {
     outline: 0;
 }
 
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+.input-group-append:last-child > .btn, .input-group-append:last-child > .btn-group {
     z-index: 3; /* 파폭, IE 테두리관련 버그 */
 }
 
