@@ -8,24 +8,18 @@ class LibertyTemplate extends BaseTemplate {
 		$title = $this->getSkin()->getTitle();
 		$curid = $this->getSkin()->getTitle()->getArticleID();
 
+        $colors = array("red", "orange", "yellow", "green", "teal", "cyan", "blue", "indigo", "purple", "pink");
+
 		Wikimedia\AtEase\AtEase::suppressWarnings();
 
 		$this->html( 'headelement' );
 		?>
-		<div class="nav-wrapper navbar-fixed-top">
+		<div class="nav-wrapper navbar-fixed-top" style="background-color: var(--<?php echo $colors[array_rand($colors)]; ?>);">
             <?php $this->nav_menu(); ?>
         </div>
         <div class="content-wrapper">
-            <div class="container-fluid liberty-content">
+            <div class="container-fluid liberty-content shadow">
                 <div class="liberty-content-header">
-                    <?php if ( $this->data['sitenotice'] && $_COOKIE['alertcheck'] != "yes" ) { ?>
-                        <div class="alert alert-dismissible fade in alert-info liberty-notice" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <?php $this->html( 'sitenotice' ) ?>
-                        </div>
-                    <?php } ?>
                     <?php $this->contents_toolbox(); ?>
                     <div class="title">
                         <h1>
@@ -83,25 +77,22 @@ class LibertyTemplate extends BaseTemplate {
                 </li>
                 <?php global $wgUser, $wgRequest;
                 if ($wgUser->isLoggedIn()) { ?>
-                        <li class="nav-item">
-                    <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '파일 업로드 특별문서를 불러옵니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
-                </li>
-                        <li class="nav-item">
-                    <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '유저 설정 특별문서를 불러옵니다. [알+쉬+o]', 'accesskey' => 'o') ); ?>
-                </li>
-                        <li class="nav-item" style="float: right;">
-                            <?=Linker::linkKnown( SpecialPage::getTitleFor( 'logout', null ), '<span class="fa fa-sign-out-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그아웃을 합니다. [알+쉬+u]', 'accesskey' => 'u') ); ?>
-                        </li>
-    
+                    <li class="nav-item">
+                        <?=Linker::linkKnown( SpecialPage::getTitleFor( 'upload', null ), '<span class="fa fa-cloud-upload-alt"></span>', array( 'class' => 'nav-link', 'title' => '파일 업로드 특별문서를 불러옵니다. [알+쉬+p]', 'accesskey' => 'p') ); ?>
+                    </li>
+                    <li class="nav-item">
+                        <?=Linker::linkKnown( SpecialPage::getTitleFor( '환경설정', null ), '<span class="fa fa-cogs"></span>', array( 'class' => 'nav-link', 'title' => '유저 설정 특별문서를 불러옵니다. [알+쉬+o]', 'accesskey' => 'o') ); ?>
+                    </li>
+                    <li class="nav-item">
+                        <?=Linker::linkKnown( SpecialPage::getTitleFor( 'logout', null ), '<span class="fa fa-sign-out-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그아웃을 합니다. [알+쉬+u]', 'accesskey' => 'u') ); ?>
+                    </li>
                 <?php } else { ?>
-                <li class="nav-item">
-                    <?=Linker::linkKnown( SpecialPage::getTitleFor( 'login', null ), '<span class="fa fa-sign-in-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그인을 합니다. [알+쉬+l]', 'accesskey' => 'l') ); ?>
-                </li>
-            <?php } ?>
-    
+                    <li class="nav-item">
+                        <?=Linker::linkKnown( SpecialPage::getTitleFor( 'login', null ), '<span class="fa fa-sign-in-alt"></span>', array( 'class' => 'nav-link', 'title' => '유저 로그인을 합니다. [알+쉬+l]', 'accesskey' => 'l') ); ?>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
-        <?php $this->getNotification(); ?>
         <?php $this->searchBox(); ?>
     </nav>
     <?php
@@ -111,9 +102,13 @@ class LibertyTemplate extends BaseTemplate {
     ?>
         <form action="<?php $this->text( 'wgScript' ) ?>" id="searchform" class="form-inline">
             <input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
-            <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
-            <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
-            <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
+            <div class="input-group">
+                <?php echo $this->makeSearchInput( array( "class" => "form-control", "id" => "searchInput") ); ?>
+                <div class="input-group-append">
+                    <button type="submit" name="go" value="보기" id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
+                    <button type="submit" name="fulltext" value="검색" id="mw-searchButton" class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
+                </div>
+            </div>
         </form>
     <?php
 	}
@@ -189,18 +184,6 @@ class LibertyTemplate extends BaseTemplate {
                 ?>
             </ul>
         <?php
-        }
-    }
-
-    function getNotification() {
-        $personalTools = $this->getPersonalTools();
-        $noti_count = $personalTools['notifications']['links']['0']['text'];
-        if ($noti_count != "0") {
-            ?>
-            <div id="pt-notifications" class="navbar-notification">
-                <a href="#"><span class="label label-danger"><?=$noti_count;?></span></a>
-            </div>
-            <?php
         }
     }
 } // end of class
