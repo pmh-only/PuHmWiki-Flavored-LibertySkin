@@ -8,16 +8,17 @@ class LibertyTemplate extends BaseTemplate {
 		$title = $this->getSkin()->getTitle();
 		$curid = $this->getSkin()->getTitle()->getArticleID();
 
-        $colors = array("red", "orange", "yellow", "green", "teal", "cyan", "blue", "indigo", "purple", "pink");
+        $colors = array("red", "orange", "green", "teal", "cyan", "blue", "indigo", "purple", "pink");
+        $color = $colors[array_rand($colors)];
 
 		Wikimedia\AtEase\AtEase::suppressWarnings();
 
 		$this->html( 'headelement' );
 		?>
-		<div class="nav-wrapper navbar-fixed-top" style="background-color: var(--<?php echo $colors[array_rand($colors)]; ?>);">
+		<div class="nav-wrapper navbar-fixed-top" style="background-color: var(--<?php echo $color ?>);">
             <?php $this->nav_menu(); ?>
         </div>
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="--navbar-color: var(--<?php echo $color ?>);">
             <div class="container-fluid liberty-content shadow">
                 <div class="liberty-content-header">
                     <?php $this->contents_toolbox(); ?>
