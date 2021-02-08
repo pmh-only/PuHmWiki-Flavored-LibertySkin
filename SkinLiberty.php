@@ -8,9 +8,11 @@ class SkinLiberty extends SkinTemplate {
     public function initPage( OutputPage $out ) {
         parent::initPage( $out );
         $out->addMeta( 'viewport', 'width=device-width, initial-scale=1, maximum-scale=1' );
-				$out->addMeta( 'keywords', 'wiki,' . $this->getSkin()->getTitle() );
-				$out->addMeta( 'og:title', $this->getSkin()->getTitle() . ' - 프흠위키' );
-				$out->addMeta( 'theme-color', '#2E7DBD' );
+				$out->addMeta( 'og:site_name', '프흠위키' );
+				$out->addMeta( 'og:title', $this->getSkin()->getTitle() );
+				$out->addMeta( 'og:description', 'IP 무기록 익명성 위키' );
+				$out->addMeta( 'theme-color', '#dc3545' );
+				$out->addMeta( 'og:image', 'https://avatars0.githubusercontent.com/u/39158228?s=460&u=85a513dbfe77b73d9f7aa9c85e3e973cb69caba6&v=4' );
 		
 				$out->addMeta('apple-mobile-web-app-capable', 'Yes');
 				$out->addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');

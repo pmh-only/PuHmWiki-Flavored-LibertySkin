@@ -39,6 +39,9 @@ class LibertyTemplate extends BaseTemplate {
                     } ?>
                     <?php $this->html( 'bodycontent' ) ?>
                 </div>
+                <div class="mt-3 text-center">
+                    프흠위키는 모든 사용자의 익명성을 존중합니다. 초상권 및 명예훼손 문의: <a href="mailto:pmhstudio.pmh@gmail.com">pmhstudio.pmh@gmail.com</a>
+                </div>
             </div>
         </div>
 		<?php
@@ -152,39 +155,4 @@ class LibertyTemplate extends BaseTemplate {
         <?php
         }
 	}
-
-    function footer() {
-        foreach ( $this->getFooterLinks() as $category => $links ) {
-            ?>
-            <ul class="footer-<?=$category;?>">
-                <?php foreach ( $links as $link ) {
-                ?>
-                    <li class="footer-<?=$category;?>-<?=$link;?>"><?php $this->html( $link ); ?></li>
-                <?php
-                }
-                ?>
-            </ul>
-            <?php
-        }
-        $footericons = $this->getFooterIcons( "icononly" );
-        if ( count( $footericons ) > 0 ) {
-        ?>
-            <ul class="footer-icons">
-                <?php
-                    foreach ( $footericons as $blockName => $footerIcons ) {
-                    ?>
-                        <li class="footer-<?=htmlspecialchars( $blockName );?>ico">
-                        <?php
-                            foreach ( $footerIcons as $icon ) {
-                                echo $this->getSkin()->makeFooterIcon( $icon );
-                            }
-                        ?>
-                        </li>
-                    <?php
-                    }
-                ?>
-            </ul>
-        <?php
-        }
-    }
 } // end of class
