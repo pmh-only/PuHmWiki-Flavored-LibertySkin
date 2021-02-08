@@ -23,7 +23,7 @@ class LibertyTemplate extends BaseTemplate {
                 <div class="liberty-content-header">
                     <?php $this->contents_toolbox(); ?>
                     <div class="title">
-                        <h1>
+                        <h1 id="firstHeading">
                             <?php $this->html( 'title' ) ?>
                         </h1>
                     </div>
@@ -31,13 +31,11 @@ class LibertyTemplate extends BaseTemplate {
                         <?php $this->html( 'subtitle' ) ?>
                     </div>
                 </div>
-                <div class="liberty-content-main">
-                    <?php if ( $title->getNamespace() != NS_SPECIAL && $action != "edit" && $action != "history") { ?>
-                    <?php } ?>
+                <div class="liberty-content-main" id="#content">
+                    <?php $this->html( 'bodycontent' ) ?>
                     <?php if ( $this->data['catlinks'] ) {
                         $this->html( 'catlinks' );
                     } ?>
-                    <?php $this->html( 'bodycontent' ) ?>
                 </div>
                 <div class="mt-3 text-center">
                     프흠위키는 모든 사용자의 익명성을 존중합니다. 초상권 및 명예훼손 문의: <a href="mailto:pmhstudio.pmh@gmail.com">pmhstudio.pmh@gmail.com</a>
@@ -136,7 +134,7 @@ class LibertyTemplate extends BaseTemplate {
                         $editaction = array( 'action' => 'edit' );
                     }
                     ?>
-                    <?=Linker::linkKnown( $title, '편집', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [알+쉬+e]', 'accesskey' => 'e' ), $editaction ); ?>
+                    <?=Linker::linkKnown( $title, '편집', array( 'id' => 'ca-edit', 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [알+쉬+e]', 'accesskey' => 'e' ), $editaction ); ?>
                     <?=Linker::linkKnown( $title, '추가', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '새 문단을 추가합니다. [알+쉬+n]', 'accesskey' => 'n' ), array( 'action' => 'edit', 'section' => 'new' ) ); ?>
                     <?=Linker::linkKnown( $title, '기록', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서의 편집 기록을 불러옵니다. [알+쉬+h]', 'accesskey' => 'h' ), array( 'action' => 'history' ) ); ?>
                     <?=Linker::linkKnown( SpecialPage::getTitleFor( 'WhatLinksHere', $title ), '역링크', array('class' => 'btn btn-secondary tools-btn')  ); ?>
