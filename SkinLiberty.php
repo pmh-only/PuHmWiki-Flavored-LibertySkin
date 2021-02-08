@@ -13,8 +13,6 @@ class SkinLiberty extends SkinTemplate {
 				$out->addMeta( 'og:description', 'IP 무기록 익명 위키' );
 				$out->addMeta( 'theme-color', '#dc3545' );
 				$out->addMeta( 'og:image', 'https://avatars0.githubusercontent.com/u/39158228?s=460&u=85a513dbfe77b73d9f7aa9c85e3e973cb69caba6&v=4' );
-				$out->addMeta( 'og:description', 'https://avatars0.githubusercontent.com/u/39158228?s=460&u=85a513dbfe77b73d9f7aa9c85e3e973cb69caba6&v=4' );
-				$out->addMeta( 'twitter:card', 'summary' );
 		
 				$out->addMeta('apple-mobile-web-app-capable', 'Yes');
 				$out->addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
