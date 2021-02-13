@@ -136,12 +136,10 @@ class LibertyTemplate extends BaseTemplate {
                         $mceeditaction = array( 'action' => 'tinymceedit' );
                     }
                     ?>
-                    <?=Linker::linkKnown( $title, '편집', array( 'id' => 'ca-edit', 'class' => 'btn btn-secondary tools-btn', 'title' => '시각 편집기로 문서를 편집합니다.' ), $mceeditaction ); ?>
-                    <?=Linker::linkKnown( $title, '원본', array( 'id' => 'ca-edit', 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [알+쉬+e]', 'accesskey' => 'e' ), $editaction ); ?>
-                    <?=Linker::linkKnown( $title, '추가', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '새 문단을 추가합니다. [알+쉬+n]', 'accesskey' => 'n' ), array( 'action' => 'edit', 'section' => 'new' ) ); ?>
+                    <?=Linker::linkKnown( $title, '편집', array( 'id' => 'ca-edit', 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 편집합니다. [알+쉬+e]', 'accesskey' => 'e' ), $editaction ); ?>
                     <?=Linker::linkKnown( $title, '기록', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서의 편집 기록을 불러옵니다. [알+쉬+h]', 'accesskey' => 'h' ), array( 'action' => 'history' ) ); ?>
-                    <?=Linker::linkKnown( SpecialPage::getTitleFor( 'WhatLinksHere', $title ), '역링크', array('class' => 'btn btn-secondary tools-btn')  ); ?>
                     <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Movepage', $title ), '옮기기', array( 'class' => 'btn btn-secondary tools-btn', 'title' => '문서를 옮깁니다. [알+쉬+b]', 'accesskey' => 'b' )); ?>
+                    <?=Linker::linkKnown( $title, '시각', array( 'id' => 'ca-edit', 'class' => 'btn btn-secondary tools-btn', 'title' => '시각 편집기로 문서를 편집합니다.' ), $mceeditaction ); ?>
                     <?php
                         if ( $title->quickUserCan( 'protect', $user ) ) { ?>
                             <?=Linker::linkKnown( $title, '/', array ('class' => 'btn btn-secondary tools-btn')); ?>
