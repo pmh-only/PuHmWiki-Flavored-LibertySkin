@@ -37,6 +37,17 @@ class LibertyTemplate extends BaseTemplate {
                         $this->html( 'catlinks' );
                     } ?>
                 </div>
+                <ins
+                    class="adsbygoogle"
+                    style="display:inline-block;width:100%;height:90px"
+                    data-ad-client="ca-pub-5402646688760293"
+                    data-ad-slot="8783568883">
+                </ins>
+
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
                 <div class="mt-3 text-center">
                     프흠위키는 모든 사용자의 익명성을 존중합니다. 초상권 및 명예훼손 문의: <a href="mailto:pmhstudio.pmh@gmail.com">pmhstudio.pmh@gmail.com</a>
                 </div>
