@@ -22,32 +22,12 @@ class LibertyTemplate extends BaseTemplate {
             <aside>
                 <div class="liberty-sidebar">
                     <div class="liberty-right-fixed">
-                    <div class="live-recent">
-                        <div class="live-recent-header">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a href="javascript:" class="nav-link active" id="liberty-recent-tab1">최근바뀜</a>
-                            </li>
-                        </ul>
-                        </div>
-                            <div class="live-recent-content">
-                                <ul class="live-recent-list" id="live-recent-list">
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                </ul>
-                            </div>
-                            <div class="live-recent-footer">
-                                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="label label-info">더보기</span>'); ?>
-                            </div>
-                        </div>
+                        <ins
+                            class="adsbygoogle"
+                            style="display:block;width:120px;height:100%"
+                            data-ad-client="ca-pub-5402646688760293"
+                            data-ad-slot="8592298515">
+                        </ins>
                     </div>
                 </div>
 			</aside>
