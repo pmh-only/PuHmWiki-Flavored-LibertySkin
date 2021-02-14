@@ -298,7 +298,7 @@ del, s, strike {
 /* 오른쪽 메뉴 수정 */
 .Liberty .content-wrapper .liberty-sidebar {
     float: right;
-    width: 15rem;
+    /* width: 15rem; */
     position: relative;
 }
 
