@@ -44,16 +44,11 @@ class LibertyTemplate extends BaseTemplate {
                     data-ad-slot="8783568883">
                 </ins>
 
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-
                 <div class="mt-3 text-center">
                     프흠위키는 모든 사용자의 익명성을 존중합니다. 초상권 및 명예훼손 문의: <a href="mailto:pmhstudio.pmh@gmail.com">pmhstudio.pmh@gmail.com</a>
                 </div>
             </div>
         </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<?php
 		$this->printTrail();
 		$this->html('debughtml');
