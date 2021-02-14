@@ -24,7 +24,7 @@ class LibertyTemplate extends BaseTemplate {
                     <div class="liberty-right-fixed">
                         <ins
                             class="adsbygoogle"
-                            style="display:block;width:120px;height:100rem"
+                            style="display:block;width:200px;height:100rem"
                             data-ad-client="ca-pub-5402646688760293"
                             data-ad-slot="8592298515">
                         </ins>
