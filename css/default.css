@@ -295,6 +295,127 @@ del, s, strike {
 }
 /* 네비 수정 End */
 
+/* 오른쪽 메뉴 수정 */
+.Liberty .content-wrapper .liberty-sidebar {
+    float: right;
+    width: 15rem;
+    position: relative;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed {
+    position: fixed;
+    z-index: 999;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent {
+    width: 15rem;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav {
+    border: 0;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item {
+    width: 7.5rem;
+    border: 1px solid #e1e8ed;
+    border-top-left-radius: 2px;
+    background-color: #f5f8fa;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item+.nav-item {
+    margin-left: 0;
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 2px;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link {
+    border: 0;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    text-align: center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    color: #6e7478;
+    position: relative;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item+.nav-item .nav-link {
+    border-top-left-radius: 0;
+    border-top-right-radius: 2px;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active {
+    color: #373a3c;
+    background-color: #fff;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link.active::before,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:hover::before,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:focus::before,
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link:active::before {
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    content: " ";
+    width: 7.5rem;
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content {
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-top: 0;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list {
+    list-style: none;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list li {
+    border-bottom: 1px solid #e1e8ed;
+    padding: 0.2rem 0.6rem;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list li:last-child {
+    border-bottom: none;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item {
+    font-size: 0.80rem;
+    color: #373a3c;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-content .live-recent-list .recent-item .new {
+    font-size: 0.80rem;
+    color: #b73333;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer {
+    background-color: #f5f8fa;
+    border: 1px solid #e1e8ed;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: right;
+    padding: 0.4rem 0.6rem;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer .label {
+    background-color: #00BCD4;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-footer .label:hover {
+    background-color: #4DD0E1;
+    transition: 0.3s;
+}
 
 /* 컨텐츠 수정 */
 .Liberty .content-wrapper {
@@ -302,6 +423,7 @@ del, s, strike {
 }
 
 .Liberty .content-wrapper .liberty-content {
+    margin-right: 16rem;
     padding: 0;
     padding-bottom: 1rem;
 }

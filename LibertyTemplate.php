@@ -19,6 +19,39 @@ class LibertyTemplate extends BaseTemplate {
             <?php $this->nav_menu(); ?>
         </div>
         <div class="content-wrapper" style="--navbar-color: var(--<?php echo $color ?>);">
+            <aside>
+                <div class="liberty-sidebar">
+                    <div class="liberty-right-fixed">
+                    <div class="live-recent">
+                        <div class="live-recent-header">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a href="javascript:" class="nav-link active" id="liberty-recent-tab1">최근바뀜</a>
+                            </li>
+                        </ul>
+                        </div>
+                            <div class="live-recent-content">
+                                <ul class="live-recent-list" id="live-recent-list">
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                    <li><span class="recent-item">&nbsp;</span></li>
+                                </ul>
+                            </div>
+                            <div class="live-recent-footer">
+                                <?=Linker::linkKnown( SpecialPage::getTitleFor( 'Recentchanges', null ), '<span class="label label-info">더보기</span>'); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</aside>
+
             <div class="container-fluid liberty-content shadow">
                 <div class="liberty-content-header">
                     <?php $this->contents_toolbox(); ?>
